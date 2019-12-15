@@ -7,4 +7,3 @@ tests
 .babelrc
 jest.config.json
 tsconfig.json
-**/*.ts
