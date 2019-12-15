@@ -1,9 +1,5 @@
-tests
-/src
-/coverage
 /.github
 .eslint*
 .prettierrc
 .babelrc
-jest.config.json
 tsconfig.json
