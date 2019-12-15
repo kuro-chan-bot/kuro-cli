@@ -6,7 +6,7 @@ export const botConfig: KuroConfiguration = {
   /**
    * Prefixes.
    */
-  prefixes: [<%= prefixes %>],
+  prefixes: [],
 
   /**
    * Providers.
