@@ -8,7 +8,10 @@ const { version } = require('./package.json')
 const cli = cac('kuro')
 
 cli
-  .command('[out-dir]', 'Generate in a custom directory or current directory')
+  .command(
+    'bot [out-dir]',
+    'Generate in a custom directory or current directory'
+  )
   .action((outDir = '.', cliOptions: any) => {
     console.log(chalk`{red Kuro CLI v${version}}`)
     console.log(chalk`✨  Generating KuroFramework project in {cyan ${outDir}}`)
