@@ -165,5 +165,21 @@ module.exports = {
         stdio: 'inherit'
       })
     }
+
+    const chalk = this.chalk
+    const isNewFolder = this.outDir !== process.cwd()
+    const relativeOutFolder = path.relative(process.cwd(), this.outDir)
+    const cdMsg = isNewFolder ? chalk`\t{cyan cd ${relativeOutFolder}}\n` : ''
+    const pmRun = this.answers.pm === 'yarn' ? 'yarn' : 'npm run'
+
+    console.log(
+      chalk`\n🎉  {bold Successfully created project} {cyan ${this.answers.name}}\n`
+    )
+
+    console.log(chalk`  {bold To get started:}\n`)
+    console.log(chalk`${cdMsg}\t{cyan ${pmRun} dev}\n`)
+
+    console.log(chalk`  {bold To start for production:}\n`)
+    console.log(chalk`\t{cyan ${pmRun} start}\n`)
   }
 }
