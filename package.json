@@ -11,10 +11,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "test": "jest --config jest.config.json",
-    "test:watch": "npm run jest --watchAll",
-    "codecov": "npm run jest && codecov",
-    "lint": "eslint ./**/*.ts"
+    "lint": "eslint ./**/*.ts",
+    "publish-npm": "yarn build; yarn publish"
   },
   "dependencies": {
     "cac": "^6.5.3",
