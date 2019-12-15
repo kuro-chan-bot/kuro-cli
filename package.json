@@ -5,7 +5,8 @@
   "types": "lib/src",
   "license": "MIT",
   "bin": {
-    "kuro": "index.js"
+    "kuro": "index.js",
+    "kuna": "index.js"
   },
   "scripts": {
     "build": "tsc",
