@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    <%_ if (prettier) { _%>
+    "plugin:prettier/recommended"
+    <%_ } _%>
+  ],
+  "plugins": [
+    <%_ if (typescript) { _%>
+    "@typescript-eslint"
+    <%_ } _%>
+  ],
+  <%_ if (typescript) { _%>
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  <%_ } _%>
+  "env": {
+    <%_ if (javascript) { _%>
+    "es6": true,
+    <%_ } _%>
+    "node": true
+  },
+  "rules": {
+    <%_ if (typescript) { _%>
+    "no-unused-vars": "off"
+    <%_ } _%>
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "watch": ["src"],
+  <%_ if (typescript) { _%>
+  "ext": "ts",
+  <%_ } else if (javascript) { _%>
+  "ext": "js",
+  <%_ } _%>
+  "exec": "npm run start"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "<%= startScript %>",
+    <%_ if (eslint) { _%>
+    "lint": "eslint --ext <%= ext %> --ignore-path .gitignore .",
+    <%_ } _%>
+    "": ""
+  },
+  "dependencies": {
+    "@kuro-chan/framework": "^0.2.14",
+    <%_ if (standardPlugin) { _%>
+    "@kuro-chan/standard-plugin": "^0.0.9",
+    <%_ } _%>
+    "": ""
+  },
+  "devDependencies": {
+    <%_ if (typescript) { _%>
+    "@types/node": "^12.12.17",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3",
+    <%_ } _%>
+    <%_ if (eslint) { _%>
+    "eslint": "^6.6.0",
+    <%_ } _%>
+    <%_ if (eslint && typescript) { _%>
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    <%_ } _%>
+    <%_ if (prettier) { _%>
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1",
+    <%_ } _%>
+    "nodemon": "^2.0.2"
+  }
+}
